@@ -7,17 +7,31 @@
     android:background="@color/white">
 
     <!-- Title -->
+
+    <!-- Name Input -->
     <TextView
-        android:id="@+id/login_title"
+        android:id="@+id/register_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:layout_marginTop="12dp"
+        android:text="@string/register"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/register_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="10dp" />
 
     <!-- Email Input -->
     <EditText
@@ -26,10 +40,10 @@
         android:layout_height="wrap_content"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/login_title"
+        app:layout_constraintTop_toBottomOf="@id/input_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="10dp" />
 
     <!-- Password Input -->
     <EditText
@@ -41,58 +55,45 @@
         app:layout_constraintTop_toBottomOf="@id/input_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="10dp" />
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/button_login"
+    <!-- Confirm Password Input -->
+    <EditText
+        android:id="@+id/input_confirm_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:backgroundTint="@color/primary"
-        android:textColor="@android:color/white"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/input_password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="10dp" />
 
-    <!-- Forgot Password -->
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:backgroundTint="@color/primary"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/input_confirm_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+
+    <!-- Back to Login -->
     <TextView
-        android:id="@+id/text_forgot_password"
+        android:id="@+id/text_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
+        android:text="@string/already_have_account"
         android:textColor="@color/primary"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/button_login"
+        app:layout_constraintTop_toBottomOf="@id/button_register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
-
-    <!-- Register Link -->
-    <TextView
-        android:id="@+id/text_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dont_have_account"
-        android:textColor="@color/primary"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/text_forgot_password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
-
-    <!-- Progress Bar -->
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/text_register"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

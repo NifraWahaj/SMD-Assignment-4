@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/beige"
+    android:layout_margin="10dp"
+>
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_name_placeholder"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_quantity_placeholder"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_price_placeholder"
+        android:layout_marginTop="4dp" />
+
+    <ImageButton
+        android:id="@+id/button_delete"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:contentDescription="@string/delete"
+        android:layout_marginLeft="300dp"
+        android:src="@drawable/ic_delete" />
+
+</LinearLayout>
